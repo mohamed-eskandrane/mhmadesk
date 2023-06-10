@@ -1,0 +1,217 @@
+:root{
+    --FColor:#141e30;
+    --EColor:#243b55;
+    --loginColor:#00000080;
+    --FontColor:#fff;
+    --Font2Color:#03e9f4;
+    
+}
+@media screen and (min-width: 300px) and (max-width: 450px) {
+    :root{
+        --Width:90%;
+        --FrWidth:35%;
+        --Fr1Width:25%;
+        --BWidth:35%;
+
+    }
+  }
+@media screen and (min-width: 451px)and (max-width: 650px)  {
+    :root{
+        --Width:80%;
+        --FrWidth:45%;
+        --Fr1Width:21%;
+        --BWidth:35%;
+    }
+}
+
+@media screen and (min-width: 651px)and (max-width: 800px)  {
+    :root{
+        --Width:75%;
+        --FrWidth:55%;
+        --Fr1Width:20%;
+        --BWidth:35%;
+    }
+}
+@media screen and (min-width: 801px)  {
+    :root{
+        --Width:70%;
+        --FrWidth:60%;
+        --Fr1Width:20%;
+        --BWidth:35%;
+    }
+}
+
+html {
+height: 100%;
+}
+body {
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+background: linear-gradient(var(--FColor), var(--EColor));
+}
+
+.login-box {
+display: flex;
+flex-direction: column;
+position: absolute;
+top: 50%;
+left: 50%;
+width: var(--Width);
+padding: 2%;
+transform: translate(-50%, -50%);
+background: var(--loginColor);
+box-sizing: border-box;
+box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+border-radius: 10px;
+}
+
+.login-box h1 {
+margin: 0 0 30px;
+padding: 0;
+color: var(--Font2Color);
+text-align: center;
+}
+
+.login-box .user-box {
+position: relative;
+}
+.Muser-box,.Muser1-box{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.Muser-box .user-box{
+   width: var(--FrWidth);
+}
+
+.login-box .user-box input,.login-box .user-box select ,#myInput3{
+width: 100%;
+padding: 10px 0;
+font-size: 16px;
+color: var(--FontColor);
+margin-bottom: 30px;
+border: none;
+border-bottom: 1px solid var(--FontColor);
+outline: none;
+background: transparent;
+direction: rtl;
+}
+.Muser1-box .user-box {
+    width: calc( var(--FrWidth) + 15%);
+}
+.login-box .user-box label {
+position: absolute;
+top: 0;
+right: 0;
+padding: 10px 0;
+font-size: 16px;
+color: var(--Font2Color);
+pointer-events: none;
+transition: 0.5s;
+}
+.checkDiv label {
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--Font2Color);
+    margin-bottom: 15px;
+    font-weight: bolder;
+}
+.NewBr{
+    width: var(--Fr1Width);
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--Font2Color);
+    margin-bottom: 15px;
+    border: 1px solid var(--FontColor);
+    font-weight: bolder;
+    background-color: inherit;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.checkDiv input {
+    color: var(--FontColor); 
+    margin-bottom: 19px;
+}
+
+.login-box .user-box select:focus ~ label,
+.login-box .user-box select:valid ~ label,
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+top: -20px;
+right: 0;
+color: var(--FontColor);
+font-size: 12px;
+}
+ #Moon, #Sun {
+position: fixed;
+top: 5px;
+left: 5px;
+font-size: 20px;
+color: white;
+}
+
+.Buto {
+position: relative;
+display: inline-block;
+padding: 6px 15px;
+color: var(--Font2Color);
+font-size: 16px;
+font-weight: bolder;
+text-decoration: none;
+text-transform: uppercase;
+overflow: hidden;
+transition: 0.5s;
+border:  var(--Font2Color)  inset 1px;
+background-color: inherit;
+border-radius: 5px;
+width:var(--BWidth) ;
+}
+.Buto a {   
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.Buto:hover , .NewBr:hover{
+background: var(--Font2Color);;
+color: var(--FontColor);
+border-radius: 5px;
+box-shadow: 0 0 5px var(--Font2Color), 0 0 25px var(--Font2Color), 0 0 50px var(--Font2Color),
+0 0 100px var(--Font2Color);
+border: var(--Font2Color) solid 1px;
+}
+.BB{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+.BA button{
+border-color: var(--FColor);
+}
+#SelectBranch  option{
+    background-color: var(--EColor);
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    background-color: var(--EColor);
+    min-width: calc( var(--FrWidth) + 15%);
+    overflow: auto;
+    z-index: 1;
+}
+
+.Unshow {display: none; }
+
+.dropdown-content a {
+  color: var(--FontColor);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: var(--EColor);
+}
+
+.dropdown-content a:hover {
+    background: var(--Font2Color);
+}
