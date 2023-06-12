@@ -86,7 +86,7 @@ function MoveName1(XXX){
 }
 function FoucusInput1() {
   document.getElementById("myDropdown").className="dropdown-content";
-  document.getElementById("myDropdown").style.top=document.getElementById("myInput").offsetTop + 40
+  document.getElementById("myDropdown").style.top=document.getElementById("myInput").offsetTop + 50
   FoucusOutInput2()
 }
 function FoucusOutInput1() {
@@ -119,7 +119,7 @@ function MoveName2(XXX){
 }
 function FoucusInput2() {
   document.getElementById("myDropdown2").className="dropdown-content";
-  document.getElementById("myDropdown2").style.top=document.getElementById("myInput2").offsetTop + 40
+  document.getElementById("myDropdown2").style.top=document.getElementById("myInput2").offsetTop + 50
   FoucusOutInput1()
 }
 function FoucusOutInput2() {
