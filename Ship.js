@@ -29,7 +29,7 @@ function init() {
             })
             Loadinput();
         })
-        
+
 
         fetch(url2)
         .then(res => res.text())
@@ -51,8 +51,8 @@ function init() {
             })
             Loadinput2();
         })
-        
-        
+        ActiveTwo();
+        Activeone();
     }
 function Loadinput(){
 let myDropdown= document.getElementById("myDropdown");
@@ -86,6 +86,7 @@ function MoveName1(XXX){
 }
 function FoucusInput1() {
   document.getElementById("myDropdown").className="dropdown-content";
+  document.getElementById("myDropdown").style.top=document.getElementById("myInput").offsetTop + 40
   FoucusOutInput2()
 }
 function FoucusOutInput1() {
@@ -118,6 +119,7 @@ function MoveName2(XXX){
 }
 function FoucusInput2() {
   document.getElementById("myDropdown2").className="dropdown-content";
+  document.getElementById("myDropdown2").style.top=document.getElementById("myInput2").offsetTop + 40
   FoucusOutInput1()
 }
 function FoucusOutInput2() {
@@ -167,7 +169,7 @@ function Getprice1(){
       document.getElementById("Result1").value=Math.round(data[Zz][XX] * weight);
     }
   document.getElementById("DivResult1").className="form-group col-md-4";
-  
+
 }
 function Loadinput2(){
 let myDropdown3= document.getElementById("myDropdown3");
@@ -201,6 +203,7 @@ function MoveName3(XXX){
 }
 function FoucusInput3() {
   document.getElementById("myDropdown3").className="dropdown-content";
+  document.getElementById("myDropdown3").style.top=document.getElementById("myInput3").offsetTop + 40
   FoucusOutInput4()
 }
 function FoucusOutInput3() {
@@ -233,6 +236,7 @@ function MoveName4(XXX){
 }
 function FoucusInput4() {
   document.getElementById("myDropdown4").className="dropdown-content";
+  document.getElementById("myDropdown4").style.top=document.getElementById("myInput4").offsetTop + 40
   FoucusOutInput3()
 }
 function FoucusOutInput4() {
@@ -254,6 +258,12 @@ function filterFunction4() {
   }
 }
 function FoucusOutInput02() {
+    document.getElementById("myDropdown3").className="Unshow";
+    document.getElementById("myDropdown4").className="Unshow";
+}
+function FoucusOutInput33() {
+    document.getElementById("myDropdown").className="Unshow";
+    document.getElementById("myDropdown2").className="Unshow";
     document.getElementById("myDropdown3").className="Unshow";
     document.getElementById("myDropdown4").className="Unshow";
 }
@@ -282,15 +292,35 @@ function Getprice2(){
       document.getElementById("Result2").value=Math.round(data2[Zz][XX] * weight2);
     }
   document.getElementById("DivResult2").className="form-group col-md-4";
-  
+
 }
 function Activeone(){
-  document.getElementById("exp").style.display="flex"
-  document.getElementById("dom").style.display="none"
+    document.getElementById("exp").style.display="flex"
+    document.getElementById("dom").style.display="none"
+    document.getElementById("Activeone").style.color="#ffffff"
+    document.getElementById("Activeone").style.backgroundColor="#DC291E"
+    document.getElementById("Activeone").style.borderRadius=" 22.5px"
+    document.getElementById("ActiveTwoP").style.color="#DC291E"
+    document.getElementById("ActiveTwo").style.backgroundColor="#ffffff"
+    document.getElementById("ActiveTwo2").style.display="none"
+    document.getElementById("ActiveTwo1").style.display="block"
+    document.getElementById("ActiveoneP").style.color="#ffffff"
+    document.getElementById("Activeone1").style.display="none"
+    document.getElementById("Activeone2").style.display="block"
+
 }
 function ActiveTwo(){
-
   document.getElementById("exp").style.display="none"
   document.getElementById("dom").style.display="flex"
+  document.getElementById("ActiveTwo").style.color="#ffffff"
+  document.getElementById("ActiveTwo").style.backgroundColor="#DC291E"
+  document.getElementById("ActiveTwo").style.borderRadius=" 22.5px"
+  document.getElementById("ActiveoneP").style.color="#DC291E"
+  document.getElementById("Activeone").style.backgroundColor="#ffffff"
+  document.getElementById("Activeone2").style.display="none"
+  document.getElementById("Activeone1").style.display="block"
+  document.getElementById("ActiveTwoP").style.color="#ffffff"
+  document.getElementById("ActiveTwo1").style.display="none"
+  document.getElementById("ActiveTwo2").style.display="block"
+  
 }
-
